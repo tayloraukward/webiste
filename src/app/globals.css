@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-void text-parchment/90 antialiased;
+  background-color: #050505;
+}
+
+::selection {
+  @apply bg-amber/25 text-parchment;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /** Frosted panel — warm, restrained */
+  .glass {
+    @apply border border-parchment/10 bg-panel/80 shadow-lift shadow-inset backdrop-blur-xl;
+  }
+
+  .focus-ring {
+    @apply outline-none ring-2 ring-amber/35 ring-offset-2 ring-offset-void;
+  }
+
+  /** Etched separator — waveform-inspired */
+  .groove-line {
+    background-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        rgba(232, 228, 220, 0.06) 12%,
+        rgba(232, 228, 220, 0.14) 50%,
+        rgba(232, 228, 220, 0.06) 88%,
+        transparent 100%
+      ),
+      repeating-linear-gradient(
+        90deg,
+        transparent 0px,
+        transparent 6px,
+        rgba(232, 228, 220, 0.04) 6px,
+        rgba(232, 228, 220, 0.04) 7px
+      );
+    height: 1px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
