@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     description:
       "Software engineer at AWS Marketplace — distributed systems, safe migrations, and product you can operate with confidence.",
   },
-  // icons: {
-  //   icon: "/favicon.svg",
-  // },
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export const viewport: Viewport = {
