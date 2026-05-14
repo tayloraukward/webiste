@@ -91,20 +91,26 @@ export function SpotifyListenExperience({ data, loading, error, variant = "defau
           </div>
         </div>
 
-        <div className="mt-10 grid gap-12 lg:grid-cols-2">
+        <div className="mt-10 flex flex-col gap-12">
           <div>
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-silver-dim">
-              Top tracks · {rangeLabel}
-            </p>
-            <div className="mt-4">
+            <div className="flex items-end justify-between gap-4">
+              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-silver-dim">
+                Top tracks · {rangeLabel}
+              </p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-silver-dim">Swipe →</p>
+            </div>
+            <div className="mt-4 snap-x snap-mandatory">
               <TopTracksGrid timeRange={range} />
             </div>
           </div>
           <div>
-            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-silver-dim">
-              Top artists · {rangeLabel}
-            </p>
-            <div className="mt-4">
+            <div className="flex items-end justify-between gap-4">
+              <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-silver-dim">
+                Top artists · {rangeLabel}
+              </p>
+              <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-silver-dim">Swipe →</p>
+            </div>
+            <div className="mt-4 snap-x snap-mandatory">
               <TopArtistsGrid timeRange={range} />
             </div>
           </div>

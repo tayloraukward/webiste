@@ -24,9 +24,9 @@ export function TopTracksGrid({ timeRange }: { timeRange: "short_term" | "medium
 
   if (!data) {
     return (
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:gap-5 sm:px-6">
         {Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="h-28 animate-pulse rounded-2xl bg-white/5" />
+          <div key={i} className="h-40 w-[176px] shrink-0 animate-pulse rounded-2xl bg-white/5" />
         ))}
       </div>
     );
@@ -37,34 +37,36 @@ export function TopTracksGrid({ timeRange }: { timeRange: "short_term" | "medium
   }
 
   return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:gap-5 sm:px-6">
       {data.tracks.map((t, idx) => (
         <motion.a
           key={t.id}
           href={t.href}
           target="_blank"
           rel="noreferrer"
-          initial={{ opacity: 0, y: 12 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-40px" }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1], delay: idx * 0.02 }}
-          whileHover={{ y: -4, transition: { type: "spring", stiffness: 400, damping: 24 } }}
-          className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-lift/90 to-panel p-4 shadow-card transition duration-500 hover:border-spotify/30 hover:shadow-glow"
+          initial={{ opacity: 0, x: 16 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1], delay: Math.min(idx, 8) * 0.03 }}
+          whileHover={{ y: -6, transition: { type: "spring", stiffness: 420, damping: 22 } }}
+          className="group relative w-[176px] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-lift to-panel shadow-card transition duration-500 hover:border-spotify/35 hover:shadow-glow-spotify"
         >
-          <div className="flex gap-4">
-            <div className="relative h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden rounded-xl bg-void shadow-inset ring-1 ring-white/10">
-              {t.albumArtUrl ? (
-                <Image src={t.albumArtUrl} alt="" fill sizes="72px" className="object-cover transition duration-500 group-hover:scale-105" />
-              ) : null}
-            </div>
-            <div className="min-w-0 flex-1">
-              <p className="truncate text-sm font-semibold text-parchment">{t.name}</p>
-              <p className="truncate text-xs text-silver-dim">{t.artists.join(", ")}</p>
-              <p className="mt-1 truncate font-mono text-[10px] text-silver-dim">{t.album}</p>
-            </div>
+          <div className="relative aspect-square w-full overflow-hidden border-b border-white/5 bg-void">
+            {t.albumArtUrl ? (
+              <Image
+                src={t.albumArtUrl}
+                alt=""
+                fill
+                sizes="176px"
+                className="object-cover transition duration-700 ease-out group-hover:scale-105"
+              />
+            ) : null}
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-void/80 via-transparent to-transparent opacity-0 transition duration-500 group-hover:opacity-100" />
           </div>
-          <div className="pointer-events-none absolute inset-0 opacity-0 transition duration-500 group-hover:opacity-100">
-            <div className="absolute inset-0 bg-gradient-to-tr from-spotify/10 via-transparent to-wrap-violet/10" />
+          <div className="p-3.5">
+            <p className="line-clamp-2 text-sm font-semibold text-parchment">{t.name}</p>
+            <p className="mt-1 line-clamp-1 text-xs text-silver-dim">{t.artists.join(", ")}</p>
+            <p className="mt-1 truncate font-mono text-[10px] text-silver-dim">{t.album}</p>
           </div>
         </motion.a>
       ))}
