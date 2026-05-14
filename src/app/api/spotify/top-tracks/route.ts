@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 
 import { getCachedTopTracks } from "@/lib/spotify/cache";
 
-
 export const runtime = "nodejs";
 
 const ranges = new Set(["short_term", "medium_term", "long_term"]);
