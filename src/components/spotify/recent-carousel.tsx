@@ -25,7 +25,12 @@ export function RecentCarousel() {
   }, []);
 
   if (!data) {
-    return <div className="h-40 animate-pulse rounded-2xl bg-white/5" />;
+    return (
+      <div className="relative h-40 overflow-hidden rounded-2xl bg-white/5" aria-live="polite" aria-busy="true">
+        <div className="h-full w-full animate-pulse bg-white/5" />
+        <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      </div>
+    );
   }
 
   if (!data.configured || data.items.length === 0) {

@@ -25,7 +25,7 @@ export function HeroSection() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[0.98] tracking-tight text-parchment sm:text-7xl sm:leading-[0.96] lg:text-8xl"
+          className="mt-6 max-w-4xl font-display text-5xl font-extrabold leading-[0.96] tracking-tight text-parchment sm:text-7xl sm:leading-[0.94] lg:text-8xl"
         >
           {SITE.name}
         </motion.h1>
@@ -48,17 +48,17 @@ export function HeroSection() {
         >
           <motion.a
             href="#personal"
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center rounded-full bg-spotify px-7 py-3.5 text-sm font-bold text-void shadow-glow-spotify transition-colors duration-300 hover:bg-spotify-bright focus-visible:focus-ring"
+            className="inline-flex items-center justify-center rounded-full bg-spotify px-7 py-3.5 text-sm font-bold text-void shadow-glow-spotify transition-all duration-300 hover:bg-spotify-bright active:scale-100 focus-visible:focus-ring"
           >
             Open live Spotify hub
           </motion.a>
           <motion.a
             href="#about"
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-7 py-3.5 text-sm font-bold text-parchment backdrop-blur-sm transition duration-300 hover:border-spotify/35 hover:bg-white/10 focus-visible:focus-ring"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-7 py-3.5 text-sm font-bold text-parchment backdrop-blur-sm transition-all duration-300 hover:border-spotify/35 hover:bg-white/14 active:scale-100 focus-visible:focus-ring"
           >
             Professional summary
           </motion.a>
@@ -74,7 +74,7 @@ export function HeroSection() {
             href={`mailto:${SITE.email}`}
             whileHover={{ y: -2, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-3 text-parchment backdrop-blur-sm transition duration-300 hover:border-spotify/35 hover:bg-white/10 hover:text-spotify-bright focus-visible:focus-ring"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 p-3 text-parchment backdrop-blur-sm transition-all duration-300 hover:border-spotify/35 hover:bg-white/14 hover:text-spotify-bright focus-visible:focus-ring"
             aria-label="Email"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -88,7 +88,7 @@ export function HeroSection() {
             rel="noreferrer"
             whileHover={{ y: -2, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-3 text-parchment backdrop-blur-sm transition duration-300 hover:border-spotify/35 hover:bg-white/10 hover:text-spotify-bright focus-visible:focus-ring"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 p-3 text-parchment backdrop-blur-sm transition-all duration-300 hover:border-spotify/35 hover:bg-white/14 hover:text-spotify-bright focus-visible:focus-ring"
             aria-label="LinkedIn"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -103,7 +103,7 @@ export function HeroSection() {
             rel="noreferrer"
             whileHover={{ y: -2, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-3 text-parchment backdrop-blur-sm transition duration-300 hover:border-spotify/35 hover:bg-white/10 hover:text-spotify-bright focus-visible:focus-ring"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 p-3 text-parchment backdrop-blur-sm transition-all duration-300 hover:border-spotify/35 hover:bg-white/14 hover:text-spotify-bright focus-visible:focus-ring"
             aria-label="GitHub"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -116,7 +116,7 @@ export function HeroSection() {
             rel="noreferrer"
             whileHover={{ y: -2, scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 p-3 text-parchment backdrop-blur-sm transition duration-300 hover:border-spotify/35 hover:bg-white/10 hover:text-spotify-bright focus-visible:focus-ring"
+            className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 p-3 text-parchment backdrop-blur-sm transition-all duration-300 hover:border-spotify/35 hover:bg-white/14 hover:text-spotify-bright focus-visible:focus-ring"
             aria-label="Instagram"
           >
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

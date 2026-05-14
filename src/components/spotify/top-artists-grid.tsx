@@ -24,9 +24,12 @@ export function TopArtistsGrid({ timeRange }: { timeRange: "short_term" | "mediu
 
   if (!data) {
     return (
-      <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:gap-5 sm:px-6">
+      <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:gap-5 sm:px-6" aria-live="polite" aria-busy="true">
         {Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="h-24 w-[176px] shrink-0 animate-pulse rounded-2xl bg-white/5" />
+          <div key={i} className="relative h-24 w-[176px] shrink-0 overflow-hidden rounded-2xl bg-white/5">
+            <div className="h-full w-full animate-pulse bg-white/5" />
+            <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+          </div>
         ))}
       </div>
     );

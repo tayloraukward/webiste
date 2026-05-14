@@ -64,6 +64,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${mono.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://api.spotify.com" />
+        <link rel="dns-prefetch" href="https://i.scdn.co" />
+      </head>
       <body className="min-h-dvh font-sans text-parchment/95">
         <a
           href="#main"

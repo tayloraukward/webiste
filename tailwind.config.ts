@@ -14,17 +14,20 @@ const config: Config = {
         "lift-bright": "#333333",
         /** Typography */
         parchment: "#ffffff",
+        "parchment-bright": "#ffffff",
         "parchment-dim": "#b3b3b3",
         silver: "#a7a7a7",
         "silver-dim": "#6a6a6a",
         /** Spotify brand accent — use intentionally */
         spotify: "#1DB954",
+        "spotify-dim": "#168f48",
         "spotify-bright": "#1ed760",
-        "spotify-dim": "#169c46",
         /** Wrapped-inspired accents (very subtle UI use) */
         "wrap-pink": "#e879f9",
         "wrap-violet": "#a78bfa",
         "wrap-cyan": "#22d3ee",
+        /** Glass utility */
+        glass: "rgba(255, 255, 255, 0.02)",
         /** Legacy tokens mapped for gradual cleanup */
         amber: "#1DB954",
         "amber-soft": "#169c46",

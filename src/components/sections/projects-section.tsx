@@ -27,7 +27,7 @@ export function ProjectsSection() {
           whileHover={{ y: -6 }}
           className="mt-14 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-lift/90 via-panel to-void shadow-lift ring-1 ring-white/5"
         >
-          <div className="grid gap-0 lg:grid-cols-[minmax(0,320px)_1fr]">
+          <div className="grid gap-0 lg:grid-cols-[minmax(0,400px)_1fr]">
             <div className="relative min-h-[14rem] overflow-hidden bg-gradient-to-br from-spotify/25 via-wrap-violet/20 to-void lg:min-h-full">
               <div className="absolute inset-0 bg-vinyl-groove opacity-[0.08]" />
               <div className="absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-spotify/30 blur-3xl" />
@@ -70,9 +70,9 @@ export function ProjectsSection() {
                     href={project.liveUrl}
                     target="_blank"
                     rel="noreferrer"
-                    whileHover={{ scale: 1.03 }}
+                    whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.98 }}
-                    className="inline-flex items-center justify-center rounded-full bg-spotify px-7 py-3 text-sm font-bold text-void shadow-glow-spotify transition-colors hover:bg-spotify-bright focus-visible:focus-ring"
+                    className="inline-flex items-center justify-center rounded-full bg-spotify px-7 py-3 text-sm font-bold text-void shadow-glow-spotify transition-all duration-300 hover:bg-spotify-bright active:scale-100 focus-visible:focus-ring"
                   >
                     Open live app
                   </motion.a>
@@ -82,7 +82,7 @@ export function ProjectsSection() {
                     href={project.githubUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-bold text-parchment underline-offset-4 transition hover:text-spotify-bright hover:underline focus-visible:focus-ring rounded"
+                    className="text-sm font-bold text-parchment underline-offset-4 transition-all duration-200 hover:text-spotify-bright hover:underline hover:translate-x-1 focus-visible:focus-ring rounded"
                   >
                     GitHub
                   </a>

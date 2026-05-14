@@ -24,10 +24,11 @@ export function PersonalSection() {
   return (
     <section
       id="personal"
-      className="relative scroll-mt-24 border-t border-white/8 bg-gradient-to-b from-graphite/80 via-ink to-void py-24"
+      className="relative scroll-mt-24 border-t border-white/8 bg-gradient-to-b from-graphite/90 via-ink/95 to-void py-24"
     >
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-spotify/40 to-transparent" />
       <div className="pointer-events-none absolute left-1/2 top-24 h-[min(70vw,520px)] w-[min(70vw,520px)] -translate-x-1/2 rounded-full bg-spotify/10 blur-[100px]" />
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(29,185,84,0.08)_0%,transparent_60%)]" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div

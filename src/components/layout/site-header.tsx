@@ -38,7 +38,7 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-void/80 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-2.5 sm:py-3.5 sm:px-6">
         <Link
           href="#hero"
           className="font-display text-sm font-bold tracking-tight text-parchment transition hover:text-spotify-bright sm:text-base"
@@ -52,7 +52,7 @@ export function SiteHeader() {
               key={l.href}
               href={l.href}
               whileHover={{ y: -1 }}
-              className="rounded-full px-3.5 py-2 text-sm font-medium text-silver-dim transition duration-300 hover:bg-white/6 hover:text-parchment focus-visible:focus-ring"
+              className="rounded-full px-4 py-2.5 text-sm font-medium text-silver-dim transition-all duration-300 hover:bg-white/12 hover:text-parchment focus-visible:focus-ring"
             >
               {l.label}
             </motion.a>

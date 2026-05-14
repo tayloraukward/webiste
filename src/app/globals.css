@@ -36,7 +36,7 @@ body {
   }
 
   .focus-ring {
-    @apply outline-none ring-2 ring-spotify/50 ring-offset-2 ring-offset-ink;
+    @apply outline-none ring-2 ring-spotify ring-offset-2 ring-offset-void;
   }
 
   /** Progress / separator — subtle green pulse at center */

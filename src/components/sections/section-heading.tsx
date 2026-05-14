@@ -20,11 +20,11 @@ export function SectionHeading({ eyebrow, title, description }: SectionHeadingPr
       className="border-b border-white/10 pb-10 sm:pb-12"
     >
       <p className="font-mono text-xs font-bold uppercase tracking-[0.42em] text-spotify-bright sm:text-[13px]">{eyebrow}</p>
-      <h2 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight text-parchment sm:text-6xl lg:text-[3.5rem] lg:leading-[1.05]">
+      <h2 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight text-parchment sm:text-6xl lg:text-7xl lg:leading-[1.03]">
         {title}
       </h2>
       {description ? (
-        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-parchment-dim sm:text-xl">{description}</p>
+        <p className="mt-5 max-w-2xl text-lg leading-[1.6] text-parchment-dim sm:text-xl">{description}</p>
       ) : null}
     </motion.header>
   );
