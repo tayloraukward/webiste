@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, IBM_Plex_Mono, Inter } from "next/font/google";
+import { IBM_Plex_Mono, Inter, Plus_Jakarta_Sans } from "next/font/google";
 
 import { SiteHeader } from "@/components/layout/site-header";
 
@@ -11,8 +11,9 @@ const inter = Inter({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
   variable: "--font-display",
   display: "swap",
 });
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s · Taylor Aukward",
   },
   description:
-    "Software engineer at AWS Marketplace — distributed systems, safe migrations, and product you can operate with confidence.",
+    "Software engineer at AWS Marketplace — distributed systems, product craft, and the same care I bring to music and UX.",
   applicationName: "Taylor Aukward",
   authors: [{ name: "Taylor Aukward" }],
   openGraph: {
@@ -43,13 +44,13 @@ export const metadata: Metadata = {
     siteName: "Taylor Aukward",
     title: "Taylor Aukward — Software Engineer",
     description:
-      "Software engineer at AWS Marketplace — distributed systems, safe migrations, and product you can operate with confidence.",
+      "Software engineer at AWS Marketplace — distributed systems, product craft, and the same care I bring to music and UX.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Taylor Aukward — Software Engineer",
     description:
-      "Software engineer at AWS Marketplace — distributed systems, safe migrations, and product you can operate with confidence.",
+      "Software engineer at AWS Marketplace — distributed systems, product craft, and the same care I bring to music and UX.",
   },
   icons: {
     icon: "/favicon.svg",
@@ -57,16 +58,16 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#050505",
+  themeColor: "#121212",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${mono.variable}`}>
-      <body className="min-h-dvh bg-void font-sans text-parchment/90">
+    <html lang="en" className={`${inter.variable} ${plusJakarta.variable} ${mono.variable}`}>
+      <body className="min-h-dvh font-sans text-parchment/95">
         <a
           href="#main"
-          className="focus-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-parchment focus:px-4 focus:py-2 focus:text-void"
+          className="focus-ring sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[100] focus:rounded-full focus:bg-spotify focus:px-4 focus:py-2 focus:text-void"
         >
           Skip to content
         </a>

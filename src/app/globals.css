@@ -11,12 +11,14 @@ html {
 }
 
 body {
-  @apply bg-void text-parchment/90 antialiased;
-  background-color: #050505;
+  @apply min-h-dvh bg-ink text-parchment/95 antialiased;
+  background-color: #121212;
+  background-image: theme(backgroundImage.ambient-app), theme(backgroundImage.noise-soft);
+  background-attachment: fixed;
 }
 
 ::selection {
-  @apply bg-amber/25 text-parchment;
+  @apply bg-spotify/30 text-parchment;
 }
 
 @layer utilities {
@@ -24,33 +26,41 @@ body {
     text-wrap: balance;
   }
 
-  /** Frosted panel — warm, restrained */
+  /** Elevated glass — streaming app panels */
   .glass {
-    @apply border border-parchment/10 bg-panel/80 shadow-lift shadow-inset backdrop-blur-xl;
+    @apply border border-parchment/10 bg-panel/85 shadow-card shadow-inset backdrop-blur-2xl;
+  }
+
+  .glass-spotify {
+    @apply border border-parchment/10 bg-gradient-to-b from-white/[0.07] to-panel/90 shadow-card shadow-inset backdrop-blur-2xl;
   }
 
   .focus-ring {
-    @apply outline-none ring-2 ring-amber/35 ring-offset-2 ring-offset-void;
+    @apply outline-none ring-2 ring-spotify/50 ring-offset-2 ring-offset-ink;
   }
 
-  /** Etched separator — waveform-inspired */
+  /** Progress / separator — subtle green pulse at center */
   .groove-line {
     background-image: linear-gradient(
         90deg,
         transparent 0%,
-        rgba(232, 228, 220, 0.06) 12%,
-        rgba(232, 228, 220, 0.14) 50%,
-        rgba(232, 228, 220, 0.06) 88%,
+        rgba(29, 185, 84, 0.12) 18%,
+        rgba(255, 255, 255, 0.12) 50%,
+        rgba(29, 185, 84, 0.12) 82%,
         transparent 100%
       ),
       repeating-linear-gradient(
         90deg,
         transparent 0px,
         transparent 6px,
-        rgba(232, 228, 220, 0.04) 6px,
-        rgba(232, 228, 220, 0.04) 7px
+        rgba(255, 255, 255, 0.03) 6px,
+        rgba(255, 255, 255, 0.03) 7px
       );
     height: 1px;
+  }
+
+  .text-gradient-hero {
+    @apply bg-gradient-to-br from-parchment via-parchment-dim to-parchment/80 bg-clip-text text-transparent;
   }
 }
 

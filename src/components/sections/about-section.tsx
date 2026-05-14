@@ -16,7 +16,7 @@ const fade = {
 
 export function AboutSection() {
   return (
-    <section id="about" className="scroll-mt-24 border-t border-parchment/5 bg-ink/50 py-24">
+    <section id="about" className="scroll-mt-24 border-t border-white/8 bg-ink/80 py-24 backdrop-blur-sm">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial="hidden"

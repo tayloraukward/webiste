@@ -8,10 +8,10 @@ import { cn } from "@/lib/utils/cn";
 
 const LINKS = [
   { href: "#hero", label: "Home" },
+  { href: "#personal", label: "Listen" },
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
   { href: "#projects", label: "Projects" },
-  { href: "#personal", label: "Personal" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
@@ -37,30 +37,31 @@ export function SiteHeader() {
   }, [open]);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-parchment/5 bg-void/75 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6">
+    <header className="sticky top-0 z-50 border-b border-white/8 bg-void/80 shadow-[0_8px_32px_rgba(0,0,0,0.45)] backdrop-blur-2xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
         <Link
           href="#hero"
-          className="font-display text-sm font-medium tracking-tight text-parchment sm:text-base"
+          className="font-display text-sm font-bold tracking-tight text-parchment transition hover:text-spotify-bright sm:text-base"
         >
           Taylor Aukward
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-0.5 md:flex" aria-label="Primary">
           {LINKS.map((l) => (
-            <a
+            <motion.a
               key={l.href}
               href={l.href}
-              className="rounded-full px-3 py-2 text-sm text-silver transition duration-300 hover:bg-parchment/5 hover:text-parchment focus-visible:focus-ring"
+              whileHover={{ y: -1 }}
+              className="rounded-full px-3.5 py-2 text-sm font-medium text-silver-dim transition duration-300 hover:bg-white/6 hover:text-parchment focus-visible:focus-ring"
             >
               {l.label}
-            </a>
+            </motion.a>
           ))}
         </nav>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-full border border-parchment/12 bg-panel/60 p-2 text-parchment transition duration-300 hover:border-parchment/22 hover:bg-lift focus-visible:focus-ring md:hidden"
+          className="inline-flex items-center justify-center rounded-full border border-white/12 bg-panel/80 p-2.5 text-parchment transition duration-300 hover:border-spotify/40 hover:bg-lift focus-visible:focus-ring md:hidden"
           aria-expanded={open}
           aria-controls="mobile-nav"
           onClick={() => setOpen((v) => !v)}
@@ -97,14 +98,14 @@ export function SiteHeader() {
             animate={{ height: "auto", opacity: 1 }}
             exit={reduce ? { height: 0, opacity: 0 } : { height: 0, opacity: 0 }}
             transition={{ duration: 0.28, ease: [0.22, 1, 0.36, 1] }}
-            className="border-t border-parchment/5 bg-void/95 md:hidden"
+            className="border-t border-white/8 bg-void/98 md:hidden"
           >
-            <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-3 sm:px-6" aria-label="Mobile primary">
+            <nav className="mx-auto flex max-w-6xl flex-col gap-0.5 px-4 py-3 sm:px-6" aria-label="Mobile primary">
               {LINKS.map((l) => (
                 <a
                   key={l.href}
                   href={l.href}
-                  className="rounded-xl px-3 py-3 text-sm text-parchment-dim transition duration-300 hover:bg-parchment/5 hover:text-parchment focus-visible:focus-ring"
+                  className="rounded-xl px-3 py-3 text-sm font-medium text-parchment-dim transition duration-300 hover:bg-white/6 hover:text-parchment focus-visible:focus-ring"
                   onClick={() => setOpen(false)}
                 >
                   {l.label}

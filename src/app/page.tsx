@@ -9,12 +9,12 @@ export default function HomePage() {
   return (
     <main id="main" className="relative">
       <HeroSection />
+      <PersonalSection />
       <AboutSection />
       <ExperienceSection />
       <ProjectsSection />
-      <PersonalSection />
       <ContactSection />
-      <footer className="border-t border-parchment/5 py-10 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-silver-dim">
+      <footer className="border-t border-white/8 bg-void/80 py-12 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-silver-dim">
         Next.js · Tailwind · Framer Motion · Spotify Web API
       </footer>
     </main>

@@ -3,9 +3,10 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import { useSpotifyPlayer } from "@/hooks/use-spotify-player";
 import { ABOUT_PHOTOS } from "@/lib/data/photos";
 import { GrooveDivider } from "@/components/visual/groove-divider";
-import { MusicSection } from "@/components/sections/music-section";
+import { SpotifyListenExperience } from "@/components/spotify/spotify-listen-experience";
 import { SectionHeading } from "@/components/sections/section-heading";
 
 const fade = {
@@ -18,34 +19,58 @@ const fade = {
 };
 
 export function PersonalSection() {
+  const { data, loading, error } = useSpotifyPlayer(12_000);
+
   return (
-    <section id="personal" className="scroll-mt-24 border-t border-parchment/5 bg-graphite/35 py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+    <section
+      id="personal"
+      className="relative scroll-mt-24 border-t border-white/8 bg-gradient-to-b from-graphite/80 via-ink to-void py-24"
+    >
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-spotify/40 to-transparent" />
+      <div className="pointer-events-none absolute left-1/2 top-24 h-[min(70vw,520px)] w-[min(70vw,520px)] -translate-x-1/2 rounded-full bg-spotify/10 blur-[100px]" />
+
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: "-60px" }}
           variants={fade}
           custom={0}
+          className="mb-10 max-w-2xl"
         >
-          <SectionHeading
-            eyebrow="Personal"
-            title="Outside of work"
-            description="A few things that keep me grounded when I’m away from the keyboard — including what I’ve been listening to lately."
-          />
+          <p className="font-mono text-xs font-bold uppercase tracking-[0.38em] text-spotify-bright">Featured experience</p>
+          <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-parchment sm:text-5xl">
+            Live listening, engineered for the web
+          </h2>
+          <p className="mt-4 text-lg leading-relaxed text-parchment-dim">
+            A Spotify-quality surface on top of your own APIs — proof that I care as much about interface polish and
+            motion as I do about infrastructure.
+          </p>
         </motion.div>
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
+        <SpotifyListenExperience data={data} loading={loading} error={error} variant="spotlight" />
+
+        <div className="mt-24">
+          <SectionHeading
+            eyebrow="Personal"
+            title="Beyond the playlist"
+            description="The human side — what keeps me curious when I’m away from the keyboard."
+          />
+        </div>
+
+        <div className="mt-10 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <motion.article
             initial="hidden"
             whileInView="show"
             viewport={{ once: true, margin: "-60px" }}
             variants={fade}
             custom={1}
-            className="glass rounded-2xl p-7"
+            whileHover={{ y: -3 }}
+            transition={{ type: "spring", stiffness: 380, damping: 28 }}
+            className="glass rounded-3xl p-7 sm:p-8"
           >
-            <h3 className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-silver">About me</h3>
-            <p className="mt-4 leading-relaxed text-parchment-dim">
+            <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-spotify-bright">About me</h3>
+            <p className="mt-4 text-base leading-relaxed text-parchment-dim sm:text-lg">
               I play guitar, cook low-and-slow barbecue when I have a full afternoon free, and stay active with pickup
               basketball, tennis, and strength training. I also love catching live shows — there’s nothing quite like a
               room where the sound hits you in the chest.
@@ -67,9 +92,10 @@ export function PersonalSection() {
               Photo slots — wire in <span className="font-mono text-silver">src/lib/data/photos.ts</span>.
             </p>
             {ABOUT_PHOTOS.map((slot, i) => (
-              <div
+              <motion.div
                 key={slot.alt}
-                className={`overflow-hidden rounded-2xl border border-parchment/10 bg-panel/60 ${
+                whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 22 } }}
+                className={`overflow-hidden rounded-2xl border border-white/10 bg-panel/60 shadow-card ${
                   slot.wide ? "col-span-2 aspect-[2/1] sm:col-span-1 sm:row-span-2 sm:aspect-square" : "aspect-square"
                 }`}
               >
@@ -83,12 +109,10 @@ export function PersonalSection() {
                     <span className="mt-2 text-silver-dim">{slot.alt}</span>
                   </div>
                 )}
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </div>
-
-        <MusicSection embedded />
       </div>
     </section>
   );

@@ -17,15 +17,15 @@ export default function OpenGraphImage() {
           justifyContent: "flex-end",
           padding: 72,
           background:
-            "radial-gradient(900px 520px at 12% -8%, rgba(196,165,116,0.35), transparent 55%), radial-gradient(700px 420px at 92% 8%, rgba(232,228,220,0.12), transparent 48%), #050505",
-          color: "#e8e4dc",
+            "radial-gradient(900px 520px at 10% -10%, rgba(29,185,84,0.35), transparent 52%), radial-gradient(700px 420px at 95% 5%, rgba(167,139,250,0.22), transparent 48%), radial-gradient(600px 400px at 50% 100%, rgba(0,0,0,0.6), transparent 55%), #121212",
+          color: "#ffffff",
           fontFamily:
             'ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"',
         }}
       >
-        <div style={{ fontSize: 62, fontWeight: 600, letterSpacing: -1.5 }}>Taylor Aukward</div>
-        <div style={{ marginTop: 14, fontSize: 26, color: "rgba(232,228,220,0.72)" }}>
-          Software engineer · AWS Marketplace · Distributed systems
+        <div style={{ fontSize: 62, fontWeight: 800, letterSpacing: -2 }}>Taylor Aukward</div>
+        <div style={{ marginTop: 14, fontSize: 26, fontWeight: 500, color: "rgba(255,255,255,0.72)" }}>
+          Software engineer · AWS Marketplace · Systems & product craft
         </div>
       </div>
     ),
