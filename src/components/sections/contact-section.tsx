@@ -17,17 +17,21 @@ export function ContactSection() {
 
           <div className="relative grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
-              <p className="font-mono text-[11px] font-medium uppercase tracking-[0.38em] text-silver-dim">Contact</p>
-              <h2 className="mt-3 font-display text-4xl font-medium tracking-tight text-parchment sm:text-5xl">Drop a line</h2>
-              <p className="mt-4 max-w-xl text-lg leading-relaxed text-parchment-dim">
-                If you’re building something ambitious — infra, product systems, or a ridiculous side project — I’d love
-                to hear it.
+              <p className="font-mono text-xs font-semibold uppercase tracking-[0.42em] text-silver-dim sm:text-[13px]">
+                Contact
+              </p>
+              <h2 className="mt-5 font-display text-5xl font-medium leading-[1.02] tracking-tight text-parchment sm:text-6xl">
+                Get in touch
+              </h2>
+              <p className="mt-5 max-w-xl text-lg leading-relaxed text-parchment-dim sm:text-xl">
+                If you’re working on infrastructure, product systems, or something experimental you want a second pair of
+                eyes on, I’m happy to connect.
               </p>
               <div className="mt-8 max-w-md">
                 <GrooveDivider />
               </div>
-              <p className="mt-8 font-display text-lg italic leading-relaxed text-silver">
-                “Good engineers reduce noise. Great ones preserve the warmth.”
+              <p className="mt-8 text-base leading-relaxed text-silver-dim">
+                Prefer email for anything substantive — I read everything, even if replies take a day or two.
               </p>
             </div>
 

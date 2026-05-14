@@ -9,9 +9,9 @@ import { cn } from "@/lib/utils/cn";
 const LINKS = [
   { href: "#hero", label: "Home" },
   { href: "#about", label: "About" },
-  { href: "#projects", label: "Projects" },
-  { href: "#music", label: "Listening" },
   { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Projects" },
+  { href: "#personal", label: "Personal" },
   { href: "#contact", label: "Contact" },
 ] as const;
 

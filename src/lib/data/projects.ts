@@ -5,6 +5,7 @@ export type Project = {
   name: string;
   category: ProjectCategory;
   description: string;
+  details?: string[];
   stack: string[];
   githubUrl?: string;
   liveUrl?: string;
@@ -16,46 +17,15 @@ export const PROJECTS: Project[] = [
     name: "Vehicle Valuation AI",
     category: "product",
     description:
-      "Agentic full-stack platform for automated vehicle price discovery with LangGraph, RAG, and deterministic valuation logic.",
+      "An end-to-end pricing assistant that helps users reason about vehicle values with transparent, auditable steps — not a black-box number.",
+    details: [
+      "Orchestrated agent workflows with LangGraph so the app can gather context, call tools, and refine answers while keeping the conversation structured and recoverable.",
+      "Combined retrieval (RAG) over domain knowledge with deterministic rules and guardrails so recommendations stay grounded when models drift.",
+      "Built as a full-stack product: FastAPI backend, streaming responses (SSE) for responsive UX, Supabase for persistence, and deployment on DigitalOcean for a stable public demo.",
+      "Focused on operational clarity: logging, error surfaces, and paths that degrade gracefully when upstream data or models are unavailable.",
+    ],
     stack: ["LangGraph", "FastAPI", "Supabase", "SSE", "DigitalOcean"],
     githubUrl: "https://github.com/tayloraukward",
-    liveUrl: undefined,
+    liveUrl: "https://pricing-optimizer-app-85uzv.ondigitalocean.app/",
   },
-  {
-    slug: "aws-marketplace-core",
-    name: "AWS Marketplace Core Platform",
-    category: "platform",
-    description:
-      "High-throughput execution workflows, automated version upgrades across millions of records, and latency wins on critical provisioning paths.",
-    stack: ["Java", "AWS", "Step Functions", "DynamoDB", "CloudFormation"],
-    githubUrl: undefined,
-    liveUrl: "https://aws.amazon.com/marketplace/",
-  },
-  {
-    slug: "serverless-po-workflow",
-    name: "Serverless PO Processing",
-    category: "platform",
-    description:
-      "Internship launch: serverless purchase order processing with Lambda, API Gateway, and CloudFormation.",
-    stack: ["Lambda", "API Gateway", "CloudFormation"],
-    githubUrl: undefined,
-    liveUrl: undefined,
-  },
-  {
-    slug: "uva-lacrosse-analytics",
-    name: "UVA Lacrosse Offensive Analytics",
-    category: "analytics",
-    description:
-      "Performance models from raw game data plus PLL shot-charting integrations for coaching strategy.",
-    stack: ["Python", "Modeling", "Sports analytics"],
-    githubUrl: undefined,
-    liveUrl: undefined,
-  },
-];
-
-export const PROJECT_FILTERS: { id: "all" | ProjectCategory; label: string }[] = [
-  { id: "all", label: "All" },
-  { id: "product", label: "Product" },
-  { id: "platform", label: "Platform" },
-  { id: "analytics", label: "Analytics" },
 ];

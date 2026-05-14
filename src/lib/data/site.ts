@@ -7,11 +7,3 @@ export const SITE = {
   instagram: "https://www.instagram.com/tayloraukward",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
 } as const;
-
-export const ROLE_ROTATIONS = [
-  "builder",
-  "systems thinker",
-  "music enthusiast",
-  "startup engineer",
-  "distributed systems nerd",
-] as const;
