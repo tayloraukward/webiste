@@ -39,14 +39,14 @@ export function PersonalSection() {
           custom={0}
           className="mb-10 max-w-2xl"
         >
-          <p className="font-mono text-xs font-bold uppercase tracking-[0.38em] text-spotify-bright">Featured experience</p>
-          <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-parchment sm:text-5xl">
+          {/* <p className="font-mono text-xs font-bold uppercase tracking-[0.38em] text-spotify-bright">Featured experience</p> */}
+          {/* <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-parchment sm:text-5xl">
             Live listening, engineered for the web
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-parchment-dim">
             A Spotify-quality surface on top of your own APIs — proof that I care as much about interface polish and
             motion as I do about infrastructure.
-          </p>
+          </p> */}
         </motion.div>
 
         <SpotifyListenExperience data={data} loading={loading} error={error} variant="spotlight" />
@@ -54,8 +54,7 @@ export function PersonalSection() {
         <div className="mt-24">
           <SectionHeading
             eyebrow="Personal"
-            title="Beyond the playlist"
-            description="The human side — what keeps me curious when I’m away from the keyboard."
+            title="Things I Enjoy"
           />
         </div>
 
@@ -72,9 +71,14 @@ export function PersonalSection() {
           >
             <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-spotify-bright">About me</h3>
             <p className="mt-4 text-base leading-relaxed text-parchment-dim sm:text-lg">
-              I play guitar, cook low-and-slow barbecue when I have a full afternoon free, and stay active with pickup
-              basketball, tennis, and strength training. I also love catching live shows — there’s nothing quite like a
-              room where the sound hits you in the chest.
+              I'm 24 years old currently living in Austin, TX. 
+              In my free time, I enjoy cooking, fishing, and staying active. 
+              Living in TX has allowed me to perfect my central Texas style BBQ on the offset smoker. 
+              You can often find me in the gym, on a run, or playing pickup basketball (ask me about my mid-range jumper).
+              I have a passion for music which started when I first picked up the guitar in middle school. Over the years this has grown into an appreciation for live music and jamming with friends. 
+        
+        
+
             </p>
             <div className="mt-8 max-w-md">
               <GrooveDivider />

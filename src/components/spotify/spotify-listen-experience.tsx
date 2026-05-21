@@ -43,9 +43,9 @@ export function SpotifyListenExperience({ data, loading, error, variant = "defau
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           <div className="min-w-0 flex-1">
             <SectionHeading
-              eyebrow="Spotify"
-              title="Now & lately"
-              description="Live playback, your charts, and listening history — proxied through Next.js so tokens never hit the browser."
+              eyebrow="My Spotify"
+              title="What I'm Listening To"
+              description="Check out my live playback, my top charts, and listening history."
             />
           </div>
           <div className="w-full shrink-0 lg:max-w-sm lg:pt-2">
