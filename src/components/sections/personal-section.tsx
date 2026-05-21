@@ -89,6 +89,7 @@ export function PersonalSection() {
             custom={2}
             className="grid grid-cols-2 gap-3 sm:gap-4"
           >
+
             {ABOUT_PHOTOS.map((slot, i) => (
               <motion.div
                 key={slot.alt}
