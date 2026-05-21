@@ -89,9 +89,6 @@ export function PersonalSection() {
             custom={2}
             className="grid grid-cols-2 gap-3 sm:gap-4"
           >
-            <p className="col-span-2 text-sm text-silver-dim">
-              Photo slots — wire in <span className="font-mono text-silver">src/lib/data/photos.ts</span>.
-            </p>
             {ABOUT_PHOTOS.map((slot, i) => (
               <motion.div
                 key={slot.alt}
