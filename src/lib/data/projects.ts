@@ -14,7 +14,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     slug: "vehicle-valuation-ai",
-    name: "Vehicle Valuation AI",
+    name: "Vehicle Valuation Agent",
     category: "product",
     description:
       "An end-to-end pricing assistant that helps users reason about vehicle values with transparent, auditable steps — not a black-box number.",
