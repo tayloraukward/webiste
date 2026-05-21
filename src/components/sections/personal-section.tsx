@@ -71,14 +71,10 @@ export function PersonalSection() {
           >
             <h3 className="font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-spotify-bright">About me</h3>
             <p className="mt-4 text-base leading-relaxed text-parchment-dim sm:text-lg">
-              I'm 24 years old currently living in Austin, TX. 
-              In my free time, I enjoy cooking, fishing, and staying active. 
+              24 years old currently living in Austin, TX. In my free time, I enjoy cooking, fishing, and staying active. 
               Living in TX has allowed me to perfect my central Texas style BBQ on the offset smoker. 
               You can often find me in the gym, on a run, or playing pickup basketball (ask me about my mid-range jumper).
               I have a passion for music which started when I first picked up the guitar in middle school. Over the years this has grown into an appreciation for live music and jamming with friends. 
-        
-        
-
             </p>
             <div className="mt-8 max-w-md">
               <GrooveDivider />
