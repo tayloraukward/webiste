@@ -1,4 +1,3 @@
-import { ContactSection } from "@/components/sections/contact-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { HeroSection } from "@/components/sections/hero-section";
 import { ListeningSection } from "@/components/sections/listening-section";
@@ -11,10 +10,6 @@ export default function HomePage() {
       <ExperienceSection />
       <ProjectsSection />
       <ListeningSection />
-      <ContactSection />
-      <footer className="border-t border-white/8 bg-void/80 py-12 text-center font-mono text-[11px] uppercase tracking-[0.22em] text-silver-dim">
-        Next.js · Tailwind · Framer Motion · Spotify Web API
-      </footer>
     </main>
   );
 }
