@@ -3,10 +3,8 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-import { useSpotifyPlayer } from "@/hooks/use-spotify-player";
 import { ABOUT_PHOTOS } from "@/lib/data/photos";
 import { GrooveDivider } from "@/components/visual/groove-divider";
-import { SpotifyListenExperience } from "@/components/spotify/spotify-listen-experience";
 import { SectionHeading } from "@/components/sections/section-heading";
 
 const fade = {
@@ -19,8 +17,6 @@ const fade = {
 };
 
 export function PersonalSection() {
-  const { data, loading, error } = useSpotifyPlayer(12_000);
-
   return (
     <section
       id="personal"
@@ -31,27 +27,7 @@ export function PersonalSection() {
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(29,185,84,0.08)_0%,transparent_60%)]" />
 
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
-        <motion.div
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, margin: "-60px" }}
-          variants={fade}
-          custom={0}
-          className="mb-10 max-w-2xl"
-        >
-          {/* <p className="font-mono text-xs font-bold uppercase tracking-[0.38em] text-spotify-bright">Featured experience</p> */}
-          {/* <h2 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-parchment sm:text-5xl">
-            Live listening, engineered for the web
-          </h2>
-          <p className="mt-4 text-lg leading-relaxed text-parchment-dim">
-            A Spotify-quality surface on top of your own APIs — proof that I care as much about interface polish and
-            motion as I do about infrastructure.
-          </p> */}
-        </motion.div>
-
-        <SpotifyListenExperience data={data} loading={loading} error={error} variant="spotlight" />
-
-        <div className="mt-24">
+        <div>
           <SectionHeading
             eyebrow="Personal"
             title="Things I Enjoy"
@@ -73,7 +49,7 @@ export function PersonalSection() {
             <p className="mt-4 text-base leading-relaxed text-parchment-dim sm:text-lg">
               24 years old currently living in Austin, TX. In my free time, I enjoy cooking, fishing, and staying active. 
               Living in TX has allowed me to perfect my central Texas style BBQ on the offset smoker. 
-              You can often find me in the gym, on a run, or playing pickup basketball (ask me about my mid-range jumper).
+              Spend a lot of time in the gym, on runs, or playing pickup basketball.
               I have a passion for music which started when I first picked up the guitar in middle school. Over the years this has grown into an appreciation for live music and jamming with friends. 
             </p>
             <div className="mt-8 max-w-md">

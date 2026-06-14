@@ -14,15 +14,14 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     slug: "vehicle-valuation-ai",
-    name: "Vehicle Valuation Agent",
+    name: "Vehicle Valuation AI Platform",
     category: "product",
     description:
-      "An end-to-end pricing assistant that helps users reason about vehicle values with transparent, auditable steps — not a black-box number.",
+      "Architected a full-stack agentic system using LangGraph and FastAPI that automates vehicle price discovery via LLM parsing, RAG retrieval, and deterministic valuation logic.",
     details: [
-      "Orchestrated agent workflows with LangGraph so the app can gather context, call tools, and refine answers while keeping the conversation structured and recoverable.",
-      "Combined retrieval (RAG) over domain knowledge with deterministic rules and guardrails so recommendations stay grounded when models drift.",
-      "Built as a full-stack product: FastAPI backend, streaming responses (SSE) for responsive UX, Supabase for persistence, and deployment on DigitalOcean for a stable public demo.",
-      "Focused on operational clarity: logging, error surfaces, and paths that degrade gracefully when upstream data or models are unavailable.",
+      "Implemented real-time state streaming via SSE and asyncio thread management for agent updates and responsive UX.",
+      "Built a complete authentication system using Google OAuth with token verification and user session management.",
+      "Deployed a containerized application on DigitalOcean with an automated CI/CD pipeline.",
     ],
     stack: ["LangGraph", "FastAPI", "Supabase", "SSE", "DigitalOcean"],
     githubUrl: "https://github.com/tayloraukward",

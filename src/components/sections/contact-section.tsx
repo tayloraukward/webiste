@@ -23,16 +23,8 @@ export function ContactSection() {
               <h2 className="mt-5 font-display text-5xl font-bold leading-[1.02] tracking-tight text-parchment sm:text-6xl">
                 Get in touch
               </h2>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-parchment-dim sm:text-xl">
-                If you’re working on infrastructure, product systems, or something experimental you want a second pair of
-                eyes on, I’m happy to connect.
-              </p>
-              <div className="mt-8 max-w-md">
-                <GrooveDivider />
-              </div>
-              <p className="mt-8 text-base leading-relaxed text-silver-dim">
-                Prefer email for anything substantive — I read everything, even if replies take a day or two.
-              </p>
+
+      
             </div>
 
             <motion.div

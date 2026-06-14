@@ -28,7 +28,7 @@ export function AboutSection() {
           <SectionHeading
             eyebrow="Overview"
             title="Professional summary"
-            description="I work on AWS Marketplace’s core platform — orchestration, infrastructure, and automation across cloud-native services. Recent work spans high-throughput execution, automated upgrades across millions of records, and meaningful latency reduction on provisioning paths. I care about safe migrations, observability you can trust, and teams that can ship without fear."
+            description="Backend software engineer with 2 years at AWS designing and building distributed systems that power millions of AWS Marketplace subscriptions and purchase agreements. Experience in workflow orchestration, infrastructure design, and large-scale automation across cloud-native architectures."
           />
           <div className="mt-10 max-w-xl">
             <GrooveDivider />

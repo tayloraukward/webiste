@@ -25,7 +25,7 @@ export default function OpenGraphImage() {
       >
         <div style={{ fontSize: 62, fontWeight: 800, letterSpacing: -2 }}>Taylor Aukward</div>
         <div style={{ marginTop: 14, fontSize: 26, fontWeight: 500, color: "rgba(255,255,255,0.72)" }}>
-          Software engineer · AWS Marketplace · Systems & product craft
+          Software engineer · AWS Marketplace · Music and AI projects
         </div>
       </div>
     ),

@@ -11,8 +11,7 @@ export function ExperienceSection() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Experience"
-          title="Where I’ve contributed"
-          description="A concise timeline. Happy to go deeper on any of this — or you can find more on LinkedIn."
+          title="Work Experience"
         />
 
         <ol className="relative mt-14 space-y-10 before:absolute before:left-[7px] before:top-2 before:h-[calc(100%-16px)] before:w-px before:bg-gradient-to-b before:from-spotify/50 before:via-white/10 before:to-transparent before:content-[''] sm:before:left-[11px]">

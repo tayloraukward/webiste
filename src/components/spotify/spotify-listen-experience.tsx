@@ -45,7 +45,7 @@ export function SpotifyListenExperience({ data, loading, error, variant = "defau
             <SectionHeading
               eyebrow="My Spotify"
               title="What I'm Listening To"
-              description="Check out my live playback, my top charts, and listening history."
+              description="Check out what I've been listening to. This pulls in what I’m playing now, recent tracks, and some all-time favorites."
             />
           </div>
           <div className="w-full shrink-0 lg:max-w-sm lg:pt-2">
@@ -66,7 +66,7 @@ export function SpotifyListenExperience({ data, loading, error, variant = "defau
         </div>
 
         <div className="mt-16 flex flex-wrap items-end justify-between gap-6">
-          <h3 className="font-display text-2xl font-bold tracking-tight text-parchment sm:text-3xl">Your top music</h3>
+          <h3 className="font-display text-2xl font-bold tracking-tight text-parchment sm:text-3xl">On repeat</h3>
           <div className="flex flex-wrap gap-2" role="tablist" aria-label="Top content time range">
             {RANGES.map((r) => {
               const active = r.id === range;
@@ -95,7 +95,7 @@ export function SpotifyListenExperience({ data, loading, error, variant = "defau
           <div>
             <div className="flex items-end justify-between gap-4">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-silver-dim">
-                Top tracks · {rangeLabel}
+                Tracks · {rangeLabel}
               </p>
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-silver-dim">Swipe →</p>
             </div>
@@ -106,7 +106,7 @@ export function SpotifyListenExperience({ data, loading, error, variant = "defau
           <div>
             <div className="flex items-end justify-between gap-4">
               <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.28em] text-silver-dim">
-                Top artists · {rangeLabel}
+                Artists · {rangeLabel}
               </p>
               <p className="font-mono text-[10px] uppercase tracking-[0.28em] text-silver-dim">Swipe →</p>
             </div>

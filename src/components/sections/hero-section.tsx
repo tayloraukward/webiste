@@ -1,8 +1,10 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { SITE } from "@/lib/data/site";
+import { ABOUT_PHOTOS } from "@/lib/data/photos";
 import { GrooveDivider } from "@/components/visual/groove-divider";
 import { WaveAmbient } from "@/components/visual/wave-ambient";
 
@@ -12,15 +14,6 @@ export function HeroSection() {
       <WaveAmbient className="opacity-100" />
 
       <div className="relative mx-auto flex min-h-[82svh] max-w-6xl flex-col justify-center px-4 pb-28 pt-20 sm:px-6 sm:pt-24">
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-          className="font-mono text-xs font-bold uppercase tracking-[0.38em] text-spotify-bright"
-        >
-          Software · Systems · Sound
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -36,9 +29,53 @@ export function HeroSection() {
           transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
           className="mt-6 max-w-2xl text-lg leading-relaxed text-parchment-dim sm:text-xl"
         >
-          I build reliable distributed systems at AWS Marketplace — and I sweat the details that make product feel
-          inevitable: motion, hierarchy, and interfaces you actually want to live in (including the music ones).
+          <span className="mb-4 block font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-spotify-bright">
+            Work Summary
+          </span>
+          Backend software engineer with 2 years at AWS designing and building distributed systems that power millions
+          of AWS Marketplace subscriptions and purchase agreements. Experience in workflow orchestration,
+          infrastructure design, and large-scale automation across cloud-native architectures.
         </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.16, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-10"
+        >
+          <div className="max-w-2xl">
+            <p className="mb-4 font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-spotify-bright">
+              Personal
+            </p>
+            <p className="text-lg leading-relaxed text-parchment-dim sm:text-xl">
+              24 years old currently living in Austin, TX. In my free time, I enjoy cooking, fishing, and staying active.
+              Living in TX has allowed me to perfect my central Texas style BBQ on the offset smoker. Spend a lot of time
+              in the gym, on runs, or playing pickup basketball. I have a passion for music which started when I first
+              picked up the guitar in middle school. Over the years this has grown into an appreciation for live music and
+              jamming with friends.
+            </p>
+          </div>
+
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
+            {ABOUT_PHOTOS.map((slot) => (
+              <motion.div
+                key={slot.alt}
+                whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 22 } }}
+                className="aspect-square overflow-hidden rounded-2xl border border-white/10 bg-panel/60 shadow-card"
+              >
+                {slot.src ? (
+                  <div className="relative h-full min-h-[9rem]">
+                    <Image src={slot.src} alt={slot.alt} fill sizes="(min-width: 1024px) 400px, 50vw" className="object-cover" />
+                  </div>
+                ) : (
+                  <div className="flex h-full min-h-[9rem] items-center justify-center p-4 text-center text-xs text-silver-dim">
+                    {slot.alt}
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,20 +84,20 @@ export function HeroSection() {
           className="mt-12 flex flex-wrap gap-3"
         >
           <motion.a
-            href="#personal"
+            href="#music"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center justify-center rounded-full bg-spotify px-7 py-3.5 text-sm font-bold text-void shadow-glow-spotify transition-all duration-300 hover:bg-spotify-bright active:scale-100 focus-visible:focus-ring"
           >
-            Open live Spotify hub
+            See what I’m listening to
           </motion.a>
           <motion.a
-            href="#about"
+            href="#experience"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-7 py-3.5 text-sm font-bold text-parchment backdrop-blur-sm transition-all duration-300 hover:border-spotify/35 hover:bg-white/14 active:scale-100 focus-visible:focus-ring"
           >
-            Professional summary
+            Read my resume
           </motion.a>
         </motion.div>
 

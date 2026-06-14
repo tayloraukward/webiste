@@ -15,8 +15,7 @@ export function ProjectsSection() {
       <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           eyebrow="Projects"
-          title="Shipped like a release"
-          description="Side-channel work with the same craft as a flagship drop — narrative, depth, and a URL you can try."
+          title="Projects"
         />
 
         <motion.article
@@ -32,7 +31,7 @@ export function ProjectsSection() {
               <div className="absolute inset-0 bg-vinyl-groove opacity-[0.08]" />
               <div className="absolute -left-20 top-1/2 h-72 w-72 -translate-y-1/2 rounded-full bg-spotify/30 blur-3xl" />
               <div className="absolute bottom-8 left-8 right-8 top-auto lg:bottom-auto lg:left-8 lg:right-8 lg:top-1/2 lg:-translate-y-1/2">
-                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.32em] text-parchment/80">Featured build</p>
+                <p className="font-mono text-[11px] font-bold uppercase tracking-[0.32em] text-parchment/80">Featured project</p>
                 <p className="mt-3 font-display text-3xl font-extrabold leading-tight text-parchment sm:text-4xl">{project.name}</p>
                 <p className="mt-2 text-sm font-medium text-parchment/70">{project.stack.slice(0, 3).join(" · ")}</p>
               </div>

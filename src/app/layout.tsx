@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s · Taylor Aukward",
   },
   description:
-    "Software engineer at AWS Marketplace — distributed systems, product craft, and the same care I bring to music and UX.",
+    "Taylor Aukward is a software engineer at AWS Marketplace building backend systems, AI projects, and a music-focused personal site.",
   applicationName: "Taylor Aukward",
   authors: [{ name: "Taylor Aukward" }],
   openGraph: {
@@ -44,13 +44,13 @@ export const metadata: Metadata = {
     siteName: "Taylor Aukward",
     title: "Taylor Aukward — Software Engineer",
     description:
-      "Software engineer at AWS Marketplace — distributed systems, product craft, and the same care I bring to music and UX.",
+      "Taylor Aukward is a software engineer at AWS Marketplace building backend systems, AI projects, and a music-focused personal site.",
   },
   twitter: {
     card: "summary_large_image",
     title: "Taylor Aukward — Software Engineer",
     description:
-      "Software engineer at AWS Marketplace — distributed systems, product craft, and the same care I bring to music and UX.",
+      "Taylor Aukward is a software engineer at AWS Marketplace building backend systems, AI projects, and a music-focused personal site.",
   },
   icons: {
     icon: "/favicon.svg",

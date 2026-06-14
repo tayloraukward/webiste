@@ -24,9 +24,13 @@ export function TopTracksGrid({ timeRange }: { timeRange: "short_term" | "medium
 
   if (!data) {
     return (
-      <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:gap-5 sm:px-6" aria-live="polite" aria-busy="true">
+      <div
+        className="-mx-4 grid auto-cols-[72vw] grid-flow-col gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:auto-cols-[15rem] sm:gap-5 sm:px-6 lg:auto-cols-[calc((100%-3.75rem)/4)]"
+        aria-live="polite"
+        aria-busy="true"
+      >
         {Array.from({ length: 6 }).map((_, i) => (
-          <div key={i} className="relative h-40 w-[176px] shrink-0 overflow-hidden rounded-2xl bg-white/5">
+          <div key={i} className="relative h-64 snap-start overflow-hidden rounded-3xl bg-white/5">
             <div className="h-full w-full animate-pulse bg-white/5" />
             <div className="absolute inset-0 -translate-x-full animate-shimmer bg-gradient-to-r from-transparent via-white/10 to-transparent" />
           </div>
@@ -40,7 +44,7 @@ export function TopTracksGrid({ timeRange }: { timeRange: "short_term" | "medium
   }
 
   return (
-    <div className="-mx-4 flex gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:gap-5 sm:px-6">
+    <div className="-mx-4 grid auto-cols-[72vw] grid-flow-col gap-4 overflow-x-auto px-4 pb-3 pt-1 [scrollbar-width:thin] sm:-mx-6 sm:auto-cols-[15rem] sm:gap-5 sm:px-6 lg:auto-cols-[calc((100%-3.75rem)/4)]">
       {data.tracks.map((t, idx) => (
         <motion.a
           key={t.id}
@@ -52,7 +56,7 @@ export function TopTracksGrid({ timeRange }: { timeRange: "short_term" | "medium
           viewport={{ once: true }}
           transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1], delay: Math.min(idx, 8) * 0.03 }}
           whileHover={{ y: -6, transition: { type: "spring", stiffness: 420, damping: 22 } }}
-          className="group relative w-[176px] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-b from-lift to-panel shadow-card transition duration-500 hover:border-spotify/35 hover:shadow-glow-spotify"
+          className="group relative snap-start overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-b from-lift to-panel shadow-card transition duration-500 hover:border-spotify/35 hover:shadow-glow-spotify"
         >
           <div className="relative aspect-square w-full overflow-hidden border-b border-white/5 bg-void">
             {t.albumArtUrl ? (
@@ -60,7 +64,7 @@ export function TopTracksGrid({ timeRange }: { timeRange: "short_term" | "medium
                 src={t.albumArtUrl}
                 alt=""
                 fill
-                sizes="176px"
+                sizes="(min-width: 1024px) 25vw, (min-width: 640px) 240px, 72vw"
                 className="object-cover transition duration-700 ease-out group-hover:scale-105"
               />
             ) : null}
