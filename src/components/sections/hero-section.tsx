@@ -103,7 +103,7 @@ export function HeroSection() {
             whileTap={{ scale: 0.98 }}
             className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/8 px-7 py-3.5 text-sm font-bold text-parchment backdrop-blur-sm transition-all duration-300 hover:border-spotify/35 hover:bg-white/14 active:scale-100 focus-visible:focus-ring"
           >
-            Read my resume
+            Read my work experience
           </motion.a>
         </motion.div>
 
