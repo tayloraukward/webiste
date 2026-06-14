@@ -23,11 +23,36 @@ export function HeroSection() {
           {SITE.name}
         </motion.h1>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4"
+        >
+          {ABOUT_PHOTOS.map((slot) => (
+            <motion.div
+              key={slot.alt}
+              whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 22 } }}
+              className="aspect-square overflow-hidden rounded-2xl border border-white/10 bg-panel/60 shadow-card"
+            >
+              {slot.src ? (
+                <div className="relative h-full min-h-[9rem]">
+                  <Image src={slot.src} alt={slot.alt} fill sizes="(min-width: 1024px) 400px, 50vw" className="object-cover" />
+                </div>
+              ) : (
+                <div className="flex h-full min-h-[9rem] items-center justify-center p-4 text-center text-xs text-silver-dim">
+                  {slot.alt}
+                </div>
+              )}
+            </motion.div>
+          ))}
+        </motion.div>
+
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.12, ease: [0.22, 1, 0.36, 1] }}
-          className="mt-6 max-w-2xl text-lg leading-relaxed text-parchment-dim sm:text-xl"
+          transition={{ duration: 0.6, delay: 0.14, ease: [0.22, 1, 0.36, 1] }}
+          className="mt-10 max-w-2xl text-lg leading-relaxed text-parchment-dim sm:text-xl"
         >
           <span className="mb-4 block font-mono text-[11px] font-bold uppercase tracking-[0.28em] text-spotify-bright">
             Work Summary
@@ -56,25 +81,6 @@ export function HeroSection() {
             </p>
           </div>
 
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
-            {ABOUT_PHOTOS.map((slot) => (
-              <motion.div
-                key={slot.alt}
-                whileHover={{ scale: 1.02, transition: { type: "spring", stiffness: 400, damping: 22 } }}
-                className="aspect-square overflow-hidden rounded-2xl border border-white/10 bg-panel/60 shadow-card"
-              >
-                {slot.src ? (
-                  <div className="relative h-full min-h-[9rem]">
-                    <Image src={slot.src} alt={slot.alt} fill sizes="(min-width: 1024px) 400px, 50vw" className="object-cover" />
-                  </div>
-                ) : (
-                  <div className="flex h-full min-h-[9rem] items-center justify-center p-4 text-center text-xs text-silver-dim">
-                    {slot.alt}
-                  </div>
-                )}
-              </motion.div>
-            ))}
-          </div>
         </motion.div>
 
         <motion.div
